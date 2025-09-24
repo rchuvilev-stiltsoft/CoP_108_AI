@@ -8,7 +8,16 @@
   "scripts": {
     "start": "open CoP.key && node CoP-server.js",
     "cop-test": "echo 'CoP test script <cop-test> executed'",
-    "//": "СКРИПТЫ ДЛЯ ПРЕЗЕНТАЦИИ"
+    "//": "СКРИПТЫ ДЛЯ ПРЕЗЕНТАЦИИ",
+    "cop-claude-bashes-show": "",
+    "cop-claude-bashes-run": "",
+    "cop-claude-commands-show": "",
+    "cop-claude-commands-run": "",
+    "cop-claude-mcp-show": "",
+    "cop-claude-mcp-run": "",
+    "cop-claude-hooks-show": "",
+    "cop-claude-hooks-run": "",
+    "cop-claude-security-show": "",
   },
   "engines": {
     "node": ">=14.0.0"
