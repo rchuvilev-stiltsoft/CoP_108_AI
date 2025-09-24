@@ -15,4 +15,4 @@
    - [Monday](https://github.com/mondaycom/mcp),
    - [Slack](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/slack),
    - Puppeeter.
-3. CodeRabbit CLI - ИИ код-ревью;
+3. [CodeRabbit CLI](https://www.coderabbit.ai/) - ИИ код-ревью;

@@ -17,7 +17,7 @@
     "cop-claude-mcp-run": "",
     "cop-claude-hooks-show": "",
     "cop-claude-hooks-run": "",
-    "cop-claude-security-show": "",
+    "cop-claude-security-show": ""
   },
   "engines": {
     "node": ">=14.0.0"
