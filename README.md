@@ -14,5 +14,5 @@
    - [Atlassian](https://www.atlassian.com/platform/remote-mcp-server), 
    - [Monday](https://github.com/mondaycom/mcp),
    - [Slack](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/slack),
-   - [Puppeeter](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/puppeteer).
+   - [Puppeteer](https://github.com/modelcontextprotocol/servers-archived/tree/main/src/puppeteer).
 3. [CodeRabbit CLI](https://www.coderabbit.ai/) - ИИ код-ревью;
