@@ -1,0 +1,28 @@
+{
+  "name": "claude-ai-cop-demo-v2",
+  "version": "2.1.0",
+  "description": "Claude AI CoP демо-скрипты по ОБНОВЛЕННОЙ презентации с tablefilter-it-tests",
+  "main": "index.js",
+  "scripts": {
+  },
+  "keywords": [
+    "claude",
+    "ai",
+    "cli",
+    "cop",
+    "presentation",
+    "v2",
+    "mcp",
+    "selenium",
+    "testing",
+    "confluence",
+    "tablefilter",
+    "patterns",
+    "lifehacks"
+  ],
+  "author": "Roman Chuvilev",
+  "license": "MIT",
+  "engines": {
+    "node": ">=14.0.0"
+  }
+}
