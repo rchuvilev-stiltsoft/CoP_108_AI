@@ -2,5 +2,6 @@
   "model": "claude-3-opus-20240229",
   "context": {
     "auto_include": ["*.json", "*.md"]
-  }
+  },
+  "hooks": ".claude/hooks.json"
 }
