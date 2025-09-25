@@ -9,15 +9,15 @@
     "start": "open CoP.key && node CoP-server.js",
     "cop-test": "echo 'CoP test script <cop-test> executed'",
     "//": "СКРИПТЫ ДЛЯ ПРЕЗЕНТАЦИИ",
-    "cop-claude-bashes-show": "",
-    "cop-claude-bashes-run": "",
-    "cop-claude-commands-show": "",
-    "cop-claude-commands-run": "",
-    "cop-claude-mcp-show": "",
-    "cop-claude-mcp-run": "",
-    "cop-claude-hooks-show": "",
-    "cop-claude-hooks-run": "",
-    "cop-claude-security-show": ""
+    "cop-claude-bashes-show": "open -a 'IntelliJ IDEA' .claude/bash_examples.sh",
+    "cop-claude-bashes-run": "bash .claude/bash_examples.sh",
+    "cop-claude-commands-show": "open -a 'IntelliJ IDEA' .claude/commands.json",
+    "cop-claude-commands-run": "echo '🚀 Testing custom commands...' && sleep 1 && echo 'Command: build' && echo 'Building project...' && sleep 1 && echo '✅ Build complete!' && echo '' && echo 'Command: test' && echo 'Running tests...' && sleep 1 && echo '✅ All tests passed!'",
+    "cop-claude-mcp-show": "open -a 'IntelliJ IDEA' .claude/mcp_settings.json",
+    "cop-claude-mcp-run": "echo '🔌 MCP Servers Demo' && echo '' && echo 'Available servers:' && echo '  • filesystem - File system access' && echo '  • github - GitHub integration' && echo '  • postgres - Database access' && echo '  • slack - Slack notifications' && echo '' && echo 'Starting filesystem server simulation...' && sleep 2 && echo '✅ MCP filesystem server connected!'",
+    "cop-claude-hooks-show": "open -a 'IntelliJ IDEA' .claude/hooks.json",
+    "cop-claude-security-show": "open -a 'IntelliJ IDEA' .claude/settings.local.json && open -a 'IntelliJ IDEA' .claude/security_settings.json",
+    "cop-claude-clauderc-show": "open -a 'IntelliJ IDEA' .claude/.clauderc"
   },
   "engines": {
     "node": ">=14.0.0"

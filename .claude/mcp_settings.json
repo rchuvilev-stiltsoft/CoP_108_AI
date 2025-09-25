@@ -1,0 +1,17 @@
+{
+  "mcpServers": {
+    "github": {
+      "command": "mcp-server-github",
+      "env": {
+        "GITHUB_TOKEN": "${GITHUB_TOKEN}"
+      },
+      "autostart": false,
+      "description": "GitHub integration for PR reviews and issues"
+    }
+  },
+  "global": {
+    "timeout": 30000,
+    "retry_on_failure": true,
+    "log_level": "info"
+  }
+}

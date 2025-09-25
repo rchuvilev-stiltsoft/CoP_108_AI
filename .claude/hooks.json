@@ -1,0 +1,31 @@
+{
+  "hooks": {
+    "pre_command": "echo '🔄 Starting command execution...'",
+    "post_command": "echo '✅ Command completed'",
+    "before_edit": {
+      "command": "echo '📝 Checking file before edit...'",
+      "blocking": false
+    },
+    "after_edit": {
+      "command": "echo '✨ File formatted and saved'",
+      "blocking": false
+    },
+    "before_commit": [
+      "echo '🧪 Running tests before commit...'",
+      "echo '✅ Tests passed!'"
+    ],
+    "after_commit": "echo '📦 Commit created successfully'",
+    "on_error": {
+      "command": "echo '❌ Error occurred!' && date >> error.log",
+      "env": {
+        "ERROR_LEVEL": "high"
+      }
+    },
+    "on_file_change": {
+      "pattern": "*.js",
+      "command": "echo '📁 JavaScript file changed, checking syntax...'"
+    },
+    "on_start": "echo '🚀 Claude session started'",
+    "on_exit": "echo '👋 Claude session ended'"
+  }
+}

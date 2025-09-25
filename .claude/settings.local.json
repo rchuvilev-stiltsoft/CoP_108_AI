@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(find:*)",
+      "Bash(mvn clean:*)",
+      "Bash(git checkout:*)",
+      "Bash(mvn dependency:*)",
+      "Bash(mvn compile:*)",
+      "Bash(npm run build-dev:*)",
+      "Bash(grep:*)",
+      "Bash(git checkout:*)",
+      "Bash(npm run build-prod:*)",
+      "Bash(mkdir:*)",
+      "Bash(mv:*)",
+      "Bash(rm:*)",
+      "Bash(cp:*)",
+      "Bash(npm test)",
+      "Bash(javap:*)"
+    ],
+    "deny": []
+  }
+}

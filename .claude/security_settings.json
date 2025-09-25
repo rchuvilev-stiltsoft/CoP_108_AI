@@ -1,0 +1,52 @@
+{
+  "security": {
+    "sandbox_mode": false,
+    "auto_redact": true,
+    "sensitive_patterns": [
+      "password",
+      "secret",
+      "api_key",
+      "token",
+      "credential"
+    ],
+    "allowed_paths": [
+      "/Users/stiltsoft_rchuvilev/Documents/Projects/**",
+      "/tmp/**"
+    ],
+    "blocked_paths": [
+      "/etc/**",
+      "/System/**",
+      "~/.ssh/**",
+      "~/.aws/**"
+    ],
+    "allowed_commands": [
+      "ls",
+      "cat",
+      "grep",
+      "npm",
+      "node",
+      "git status",
+      "git diff"
+    ],
+    "blocked_commands": [
+      "rm -rf /",
+      "sudo rm -rf",
+      "format c:",
+      "dd if=/dev/zero"
+    ],
+    "max_command_length": 1000,
+    "require_approval": [
+      "rm -rf",
+      "git push --force",
+      "npm publish",
+      "docker rm"
+    ],
+    "auto_approve": [
+      "ls",
+      "pwd",
+      "echo",
+      "git status",
+      "npm test"
+    ]
+  }
+}

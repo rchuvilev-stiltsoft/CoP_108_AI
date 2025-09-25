@@ -7,6 +7,16 @@
 
 - `CoP.key` - Presentation
 
+## Sample Configuration Files
+
+### 📁 Core Configs
+
+- **`.clauderc`** - Project-specific Claude configuration
+- **`commands.json`** - Custom command definitions
+- **`mcp_settings.json`** - MCP (Model Context Protocol) server configurations
+- **`hooks.json`** - Automation hooks for various events
+- **`security_settings.json`** - Security and permission settings
+
 ## Links
 
 1. [n8n](https://n8n.io/), [zoho](https://www.zoho.com/creator/decode/ai-workflow-automation-tranforming-business-operations) - автоматизация;

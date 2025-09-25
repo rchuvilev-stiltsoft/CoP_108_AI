@@ -1,0 +1,33 @@
+{
+  "commands": {
+    "build": {
+      "command": "echo 'Building project...' && sleep 2 && echo '✅ Build complete!'",
+      "description": "Build the project",
+      "confirm": false
+    },
+    "test": {
+      "command": "echo 'Running tests...' && sleep 1 && echo '✅ All tests passed!'",
+      "description": "Run all tests",
+      "confirm": false
+    },
+    "deploy": {
+      "command": "echo '⚠️  Deploying to production...' && sleep 3 && echo '🚀 Deployed successfully!'",
+      "description": "Deploy to production",
+      "confirm": true,
+      "env": {
+        "NODE_ENV": "production"
+      }
+    },
+    "clean": {
+      "command": "echo 'Cleaning build artifacts...' && echo '🗑️  Cleaned!'",
+      "description": "Clean build files",
+      "confirm": true
+    }
+  },
+  "aliases": {
+    "b": "build",
+    "t": "test",
+    "d": "deploy",
+    "c": "clean"
+  }
+}
