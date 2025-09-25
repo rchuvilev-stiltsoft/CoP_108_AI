@@ -1,58 +1,6 @@
 {
-  "extends": "~/.config/claude/settings.json",
-  "model": {
-    "name": "claude-3-opus-20240229",
-    "temperature": 0.7,
-    "max_tokens": 4096,
-    "system_prompt": "You are a helpful AI assistant demonstrating Claude Code features at a CoP presentation"
-  },
+  "model": "claude-3-opus-20240229",
   "context": {
-    "auto_include": [
-      "demo-configs/**/*",
-      "package.json",
-      "README.md",
-      "CLAUDE.md"
-    ],
-    "exclude": [
-      "node_modules/**",
-      "*.log"
-    ],
-    "max_file_size": 500000,
-    "preserve_history": true
-  },
-  "tools": {
-    "enabled": ["bash", "read", "write", "edit", "search"],
-    "auto_approve": [
-      "ls",
-      "cat",
-      "echo",
-      "node demo-*.js",
-      "npm run cop-*"
-    ],
-    "require_approval": [
-      "rm -rf",
-      "git push"
-    ]
-  },
-  "env": {
-    "NODE_ENV": "development",
-    "DEMO_MODE": "true",
-    "PORT": "5000"
-  },
-  "commands": {
-    "demo": "echo 'Running CoP demo...'",
-    "start-server": "node CoP-server.js",
-    "open-presentation": "open CoP.key"
-  },
-  "aliases": {
-    "d": "demo",
-    "s": "start-server",
-    "p": "open-presentation"
-  },
-  "project": {
-    "name": "CoP-108 Claude AI Demo",
-    "type": "presentation-demo",
-    "version": "2.1.0",
-    "description": "Community of Practice presentation demos for Claude Code"
+    "auto_include": ["*.json", "*.md"]
   }
 }

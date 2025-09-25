@@ -12,10 +12,11 @@
     "cop-claude-bashes-show": "open -a 'IntelliJ IDEA' .claude/bash_examples.sh",
     "cop-claude-bashes-run": "bash .claude/bash_examples.sh",
     "cop-claude-commands-show": "open -a 'IntelliJ IDEA' .claude/commands.json",
-    "cop-claude-commands-run": "echo '🚀 Testing custom commands...' && sleep 1 && echo 'Command: build' && echo 'Building project...' && sleep 1 && echo '✅ Build complete!' && echo '' && echo 'Command: test' && echo 'Running tests...' && sleep 1 && echo '✅ All tests passed!'",
+    "cop-claude-commands-run": "echo 'Custom command example: /run hello'",
     "cop-claude-mcp-show": "open -a 'IntelliJ IDEA' .claude/mcp_settings.json",
-    "cop-claude-mcp-run": "echo '🔌 MCP Servers Demo' && echo '' && echo 'Available servers:' && echo '  • filesystem - File system access' && echo '  • github - GitHub integration' && echo '  • postgres - Database access' && echo '  • slack - Slack notifications' && echo '' && echo 'Starting filesystem server simulation...' && sleep 2 && echo '✅ MCP filesystem server connected!'",
+    "cop-claude-mcp-run": "echo 'MCP example: filesystem server for file access'",
     "cop-claude-hooks-show": "open -a 'IntelliJ IDEA' .claude/hooks.json",
+    "cop-claude-hooks-run": "echo 'Hook example: after_edit runs after file changes'",
     "cop-claude-security-show": "open -a 'IntelliJ IDEA' .claude/settings.local.json && open -a 'IntelliJ IDEA' .claude/security_settings.json",
     "cop-claude-clauderc-show": "open -a 'IntelliJ IDEA' .claude/.clauderc"
   },
