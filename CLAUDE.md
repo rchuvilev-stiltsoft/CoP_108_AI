@@ -6,63 +6,64 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 This is a CoP (Community of Practice) presentation demo project for Claude AI, showcasing various Claude Code CLI features and capabilities. The project includes an Express.js server that serves a web interface for executing demonstration scripts linked to a Keynote presentation.
 
-## Architecture
-
-### Core Components
-
-1. **CoP-server.js**: Express server that dynamically generates HTTP endpoints from package.json scripts prefixed with "cop-". Opens scripts in new terminal windows on macOS/Windows/Linux when triggered via HTTP requests.
-
-2. **CoP.key**: Keynote presentation file containing slides about Claude AI capabilities, patterns, and practical usage.
-
-3. **Demo Script System**: Scripts defined in package.json are automatically exposed as HTTP endpoints. The server listens on port 5000 and provides a web interface to trigger demos.
-
 ## Development Commands
 
 ```bash
-# Start presentation and demo server
+# Start presentation and demo server (opens Keynote + starts Express server)
 npm run start
 
-# Test if cop- scripts work
+# Test demonstration scripts
 npm run cop-test
 
 # Install dependencies
 npm install
 ```
 
-## Demo Scripts Structure
+## Architecture
 
-The following demo scripts are placeholders that need implementation based on the presentation content:
+### Core Components
 
-- `cop-claude-bashes-show`: Demonstrate background bash processes
-- `cop-claude-bashes-run`: Execute background bash examples
-- `cop-claude-commands-show`: Show custom commands configuration
-- `cop-claude-commands-run`: Execute custom commands
-- `cop-claude-mcp-show`: Display MCP server configuration
-- `cop-claude-mcp-run`: Run MCP server examples
-- `cop-claude-hooks-show`: Show hooks configuration
-- `cop-claude-hooks-run`: Execute hooks examples
-- `cop-claude-security-show`: Demonstrate security features
+**CoP-server.js**: Express server (port 5000) that dynamically generates HTTP endpoints from `package.json` scripts prefixed with "cop-". Cross-platform terminal launching for macOS/Windows/Linux via AppleScript, CMD, or common Linux terminals.
 
-## Presentation Content Mapping
+**Package.json Script System**: The server automatically exposes any npm script starting with "cop-" as HTTP endpoints. When accessed, these endpoints both run the script and open it in a new terminal window for interactive demonstration.
 
-The presentation covers:
-- Slides 1-7: AI overview and Claude CLI introduction
-- Slides 8-10: Installation, interface, and features
-- Slides 12-14: Usage patterns and tool combinations
-- Slides 16-18: Strengths and advantages
-- Slides 20-22: Common issues and solutions
-- Slides 24-26: Automation tips and approaches
+### HTTP Request Flow
+1. HTTP GET to `/cop-*` endpoint
+2. Server spawns terminal window with script execution 
+3. Server runs script in current process to capture output
+4. Browser displays captured output and auto-closes after 1 second
+5. Terminal window remains open for interactive demonstration
 
-## Server Behavior
+### Demo Script Categories
 
-When a `cop-*` script is triggered via HTTP:
-1. Opens a new terminal window with the script
-2. Captures and displays output in the browser
-3. Auto-closes the browser tab after 1 second
-4. Terminal window remains open for interactive demos
+**Configuration Display Scripts**: Open configuration files in IntelliJ IDEA
+- `cop-claude-*-show`: Display various `.claude/` configuration files
+
+**Interactive Demo Scripts**: Execute Claude commands to demonstrate features
+- `cop-claude-bashes-run`: Background process demonstration via `.claude/demo_process.sh`
+- `cop-claude-commands-run`: Custom command execution from `.claude/commands.json`
+- `cop-claude-mcp-run`: MCP server integration demonstration
+- `cop-claude-hooks-run`: Hook trigger demonstration via file editing
+- `cop-claude-security-run`: Security feature demonstration
+
+### Configuration Structure
+
+The `.claude/` directory contains demonstration configurations:
+- `commands.json`: Custom command definitions
+- `hooks.json`: Event-driven automation hooks  
+- `mcp_settings.json`: Model Context Protocol server settings
+- `security_settings.json`: Security and permission configurations
+- `bash_examples.sh` & `demo_process.sh`: Demonstration scripts
+
+## Platform Support
+
+The server handles terminal launching across platforms:
+- **macOS**: AppleScript + Terminal.app
+- **Windows**: CMD with new window spawning
+- **Linux**: Attempts common terminals (gnome-terminal, konsole, xterm)
 
 ## Important Resources
 
 - MCP Servers Repository: https://github.com/modelcontextprotocol/servers
-- Atlassian MCP Integration: https://www.atlassian.com/platform/remote-mcp-server
+- Atlassian MCP Integration: https://www.atlassian.com/platform/remote-mcp-server  
 - CodeRabbit CLI: https://www.coderabbit.ai/
