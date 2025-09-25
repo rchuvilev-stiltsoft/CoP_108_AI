@@ -1,5 +1,0 @@
-{
-  "hooks": {
-    "after_edit": "echo 'Hook worked, file saved and formatted' > hook_test.txt"
-  }
-}

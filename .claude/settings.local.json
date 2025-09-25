@@ -15,8 +15,24 @@
       "Bash(rm:*)",
       "Bash(cp:*)",
       "Bash(npm test)",
-      "Bash(javap:*)"
+      "Bash(javap:*)",
+      "WebFetch(domain:docs.anthropic.com)",
+      "WebFetch(domain:docs.claude.com)",
+      "Bash(claude --version)"
     ],
-    "deny": []
+    "deny": [],
+    "hooks": {
+      "PostToolUse": [
+        {
+          "matcher": "Edit",
+          "hooks": [
+            {
+              "type": "command",
+              "command": "echo 'Hook worked, file saved and formatted' > hook_test.txt"
+            }
+          ]
+        }
+      ]
+    }
   }
 }

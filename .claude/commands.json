@@ -1,5 +1,0 @@
-{
-  "commands": {
-    "hello": "echo 'Hello from custom command!'"
-  }
-}
