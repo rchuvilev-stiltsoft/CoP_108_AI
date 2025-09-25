@@ -18,7 +18,8 @@
       "Bash(javap:*)",
       "WebFetch(domain:docs.anthropic.com)",
       "WebFetch(domain:docs.claude.com)",
-      "Bash(claude --version)"
+      "Bash(claude --version)",
+      "Bash(bash:*)"
     ],
     "deny": [],
     "hooks": {
